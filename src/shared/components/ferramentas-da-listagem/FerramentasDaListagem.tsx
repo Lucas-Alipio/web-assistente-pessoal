@@ -1,6 +1,6 @@
 import { Box, TextField, Button, Paper, useTheme, Icon } from "@mui/material";
 
-interface IBarraDeFerramentasProps {
+interface IFerramentasDaListagemProps {
   children?: React.ReactNode;
 
   textoDaBusca?: string;
@@ -11,7 +11,7 @@ interface IBarraDeFerramentasProps {
   mostrarBotaoNovo?: boolean;
   aoClicarEmNovo?: () => void;
 }
-export const BarraDeFerramentas: React.FC<IBarraDeFerramentasProps> = ({
+export const FerramentasDaListagem: React.FC<IFerramentasDaListagemProps> = ({
   children,
   textoDaBusca = "",
   mostrarInputBusca = false,
