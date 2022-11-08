@@ -13,7 +13,7 @@ import {
 import { Box } from "@mui/system";
 import { useMatch, useNavigate, useResolvedPath } from "react-router-dom";
 
-import { useDrawerContext } from "../../contexts";
+import { useAppThemeContext, useDrawerContext } from "../../contexts";
 
 
 interface IListItemLinkProps {
@@ -54,6 +54,7 @@ export const SideMenu: React.FC<ISideMenuProps> = ({ children }) => {
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
   const { isDrawerOpen, toggleDrawerOpen, drawerOptions } = useDrawerContext();
+  const { toggleTheme, themeName } = useAppThemeContext();
 
   return (
     <>
@@ -92,7 +93,20 @@ export const SideMenu: React.FC<ISideMenuProps> = ({ children }) => {
               ))}
             </List>
           </Box>
+
+          <Box>
+            <List component="nav">
+              <ListItemButton onClick={toggleTheme}>
+                <ListItemIcon>
+                  {themeName === 'dark' ? (<Icon>light_mode</Icon>) : (<Icon>dark_mode</Icon>)}
+                </ListItemIcon>
+                <ListItemText primary="Alternar Tema"/>
+              </ListItemButton>
+            </List>
+          </Box>
+
         </Box>
+
       </Drawer>
 
       <Box height="100vh" marginLeft={smDown ? 0 : theme.spacing(28)}>
