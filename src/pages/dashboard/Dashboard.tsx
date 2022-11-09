@@ -11,7 +11,6 @@ export const Dashboard = () => {
       barraDeFerramentas={(
         <FerramentasDeDetalhe
           mostrarBotaoSalvarEFechar
-          mostrarBotaoSalvarCarregando
         />
       )}
     >
