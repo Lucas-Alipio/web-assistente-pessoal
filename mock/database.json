@@ -1,7 +1,7 @@
 {
   "Users": [
     {
-      "Id": 1,
+      "id": 1,
       "name":"Lucas",
       "email":"lucas@g.com",
       "password":"123",
@@ -20,7 +20,7 @@
     },
 
     {
-      "Id": 2,
+      "id": 2,
       "name":"Lucas2",
       "email":"lucas2@g.com",
       "password":"123",
