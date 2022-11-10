@@ -1,20 +1,20 @@
 {
-  "Users": [
+  "users": [
     {
       "id": 1,
       "name":"Lucas",
       "email":"lucas@g.com",
       "password":"123",
-      "tarefas":[
+      "tasks":[
         {
           "id":"t01",
           "content":"Method PUT para tasks",
-          "validade":"20/11/2022"
+          "expiration_date":"20/11/2022"
         },
         {
           "id":"t02",
           "content":"Method GET para todas tasks",
-          "validade":"20/11/2022"
+          "expiration_date":"20/11/2022"
         }
       ]
     },
@@ -24,16 +24,16 @@
       "name":"Lucas2",
       "email":"lucas2@g.com",
       "password":"123",
-      "tarefas":[
+      "tasks":[
         {
           "id":"t01",
           "content":"Method PUT para tasks",
-          "validade":"20/11/2022"
+          "expiration_date":"20/11/2022"
         },
         {
           "id":"t02",
           "content":"Method GET para todas tasks",
-          "validade":"20/11/2022"
+          "expiration_date":"20/11/2022"
         }
       ]
     }
