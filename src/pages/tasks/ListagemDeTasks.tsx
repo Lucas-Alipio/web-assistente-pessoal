@@ -1,6 +1,7 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 
+import { UsersService } from "../../shared/services/api/users/UsersService";
 import { FerramentasDaListagem } from "../../shared/components";
 import { BaseLayoutPage } from "../../shared/layouts";
 
@@ -13,6 +14,19 @@ export const ListagemDeTasks: React.FC = () => {
   const search = useMemo(() => {
     return searchParams.get("search") || "";
   }, [searchParams]);
+
+  useEffect(() => {
+
+    UsersService.getAll(1, search)
+    .then((result) => {
+      if ( result instanceof Error) {
+        alert(result.message);
+      } else {
+        console.log(result);
+      }
+    })
+
+  }, [search]);
 
   return(
     <BaseLayoutPage 
