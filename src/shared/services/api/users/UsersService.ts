@@ -7,7 +7,7 @@ interface Itasks {
   expiration_date: string,
 }
 
-interface IDetalheUser {
+export interface IDetalheUser {
   id: number,
   name: string,
   email: string,
