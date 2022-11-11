@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
   LinearProgress,
+  Pagination,
   Paper,
   Table,
   TableBody,
@@ -33,11 +34,15 @@ export const ListagemDeTasks: React.FC = () => {
     return searchParams.get("search") || "";
   }, [searchParams]);
 
+  const page = useMemo(() => {
+    return Number(searchParams.get("page") || "1");
+  }, [searchParams]);
+
   useEffect(() => {
     setIsLoading(true);
 
     debounce(() => {
-      UsersService.getAll(1, search).then((result) => {
+      UsersService.getAll(page, search).then((result) => {
         setIsLoading(false);
 
         if (result instanceof Error) {
@@ -50,7 +55,7 @@ export const ListagemDeTasks: React.FC = () => {
         }
       });
     });
-  }, [search]);
+  }, [search, page]);
 
   return (
     <BaseLayoutPage
@@ -61,7 +66,7 @@ export const ListagemDeTasks: React.FC = () => {
           textoDaBusca={search}
           textoBotaoNovo="Nova"
           aoMudarTextoDeBusca={(text) =>
-            setSearchParams({ search: text }, { replace: true })
+            setSearchParams({ search: text, page: '1' }, { replace: true })
           }
         />
       }
@@ -96,6 +101,21 @@ export const ListagemDeTasks: React.FC = () => {
               <TableRow>
                 <TableCell colSpan={3}>
                     <LinearProgress variant="indeterminate"/>
+                </TableCell>
+              </TableRow>
+            )}
+
+            {(totalCount > 0 && totalCount > Environment.LIMITE_DE_LINHAS) && (
+              <TableRow>
+                <TableCell colSpan={3}>
+                    <Pagination
+                      page={page}
+                      count={Math.ceil(totalCount / Environment.LIMITE_DE_LINHAS)}
+                      onChange={(_, newPage) => setSearchParams(
+                          { search, page: newPage.toString()}, 
+                          {replace: true}
+                      )}
+                    />
                 </TableCell>
               </TableRow>
             )}
