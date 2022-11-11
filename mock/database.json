@@ -36,6 +36,25 @@
           "expiration_date":"20/11/2022"
         }
       ]
+    },
+
+    {
+      "id": 3,
+      "name":"Maria",
+      "email":"maria@g.com",
+      "password":"123",
+      "tasks":[
+        {
+          "id":"t01",
+          "content":"Method PUT para tasks",
+          "expiration_date":"20/11/2022"
+        },
+        {
+          "id":"t02",
+          "content":"Method GET para todas tasks",
+          "expiration_date":"20/11/2022"
+        }
+      ]
     }
   ]
 }
