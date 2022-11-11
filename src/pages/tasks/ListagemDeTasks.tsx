@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import {
+  Icon,
+  IconButton,
   LinearProgress,
   Pagination,
   Paper,
@@ -25,6 +27,7 @@ import { Environment } from "../../shared/environment";
 export const ListagemDeTasks: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { debounce } = useDebounce();
+  const navigate = useNavigate();
 
   const [rows, setRows] = useState<IDetalheUser[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -57,6 +60,24 @@ export const ListagemDeTasks: React.FC = () => {
     });
   }, [search, page]);
 
+
+  const handleDelete = (id: number) => {
+    
+    if (window.confirm("Realmente deseja apagar?")) {
+      UsersService.deleteById(id)
+        .then(result => {
+          if(result instanceof Error) {
+            window.alert(result.message);
+          } else {
+            setRows(oldRows => [
+              ...oldRows.filter(oldRow => oldRow.id !== id),
+            ]);
+            window.alert("Registro Apagado com sucesso!");
+          }
+        });
+    }
+  };
+
   return (
     <BaseLayoutPage
       titulo="Tasks Control"
@@ -79,6 +100,7 @@ export const ListagemDeTasks: React.FC = () => {
               <TableCell>Descrição</TableCell>
               <TableCell>Data Limite</TableCell>
               <TableCell>Status</TableCell>
+              <TableCell>Ações</TableCell>
             </TableRow>
           </TableHead>
 
@@ -88,6 +110,15 @@ export const ListagemDeTasks: React.FC = () => {
                 <TableCell>{row.id}</TableCell>
                 <TableCell>{row.name}</TableCell>
                 <TableCell>{row.email}</TableCell>
+                <TableCell>
+                  <IconButton size="small" onClick={() => navigate(`/task/detalhe/${row.id}`)}>
+                    <Icon>edit</Icon>
+                  </IconButton>
+                  <IconButton size="small" onClick={() => handleDelete(row.id)}>
+                    <Icon>delete</Icon>
+                  </IconButton>
+                </TableCell>
+
               </TableRow>
             ))}
           </TableBody>

@@ -1,168 +1,124 @@
 {
   "users": [
     {
-      "id": 1,
-      "name":"Lucas",
-      "email":"lucas@g.com",
-      "password":"123",
-      "tasks":[
-        {
-          "id":"t01",
-          "content":"Method PUT para tasks",
-          "expiration_date":"20/11/2022"
-        },
-        {
-          "id":"t02",
-          "content":"Method GET para todas tasks",
-          "expiration_date":"20/11/2022"
-        }
-      ]
-    },
-
-    {
-      "id": 2,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123",
-      "tasks":[
-        {
-          "id":"t01",
-          "content":"Method PUT para tasks",
-          "expiration_date":"20/11/2022"
-        },
-        {
-          "id":"t02",
-          "content":"Method GET para todas tasks",
-          "expiration_date":"20/11/2022"
-        }
-      ]
-    },
-
-    {
       "id": 3,
-      "name":"Maria",
-      "email":"maria@g.com",
-      "password":"123",
-      "tasks":[
+      "name": "Maria",
+      "email": "maria@g.com",
+      "password": "123",
+      "tasks": [
         {
-          "id":"t01",
-          "content":"Method PUT para tasks",
-          "expiration_date":"20/11/2022"
+          "id": "t01",
+          "content": "Method PUT para tasks",
+          "expiration_date": "20/11/2022"
         },
         {
-          "id":"t02",
-          "content":"Method GET para todas tasks",
-          "expiration_date":"20/11/2022"
+          "id": "t02",
+          "content": "Method GET para todas tasks",
+          "expiration_date": "20/11/2022"
         }
       ]
     },
     {
       "id": 4,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 5,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 6,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
-    },
-    {
-      "id": 7,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 8,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 9,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 10,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 11,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 12,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 13,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 14,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 15,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 16,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 17,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 18,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 19,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 20,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     },
     {
       "id": 21,
-      "name":"Lucas2",
-      "email":"lucas2@g.com",
-      "password":"123"
+      "name": "Lucas2",
+      "email": "lucas2@g.com",
+      "password": "123"
     }
   ]
 }
